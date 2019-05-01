@@ -1,0 +1,13 @@
+.user-profile .profile-text > a {
+    color: #ffffff !important;
+    width: 100%;
+    padding: 6px 30px;
+    background: #62addc;
+    display: block;
+    white-space: nowrap;
+}
+#snav .mat-list-item.selected > .mat-list-item-content > a {
+    background: #62addc;
+    border-radius: 4px;
+    color: #ffffff;
+}

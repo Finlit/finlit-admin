@@ -1,0 +1,163 @@
+.example-header-image {
+    width: 56px;
+    border-radius: 100%;
+    height: 59px;
+    margin-left: 40%;
+    margin-top: -42px;
+   
+    transition: transform .1s;
+}
+
+.example-header-image:hover {
+    -ms-transform: scale(1.2); 
+    -webkit-transform: scale(1.2); 
+    transform: scale(1.2); 
+}
+
+i.material-icons {
+    color: gray;
+    width: 12px;
+}
+
+button#btn {
+    width: 100%;
+    font-size: 12px;
+    border-color: white;
+    border-radius: -90px;
+    background-color: #62addc;
+    /* margin-left: 137px; */
+    margin-top: -19px;
+}
+.col {
+    font-size: 12px;
+}
+
+div#contact {
+    margin-top: 15px;
+}
+
+.height_100px {
+    height: 100px;
+}
+a.mat-raised-button {
+    color: white;
+    background-color: #1c6181;
+    border-radius: 20px;
+  }
+
+  
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 3px;
+    padding: 15px;
+}
+
+form#form {
+    width: 88%;
+    margin-left: 27px;
+}
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 120%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+
+mat-card-title.mat-card-title {
+    font-size: 18px;
+    font-family: "Gill Sans", sans-serif;
+    color: #62addc;
+}
+
+
+.mat-card>.mat-card-actions:last-child {
+    margin-bottom: 17px;
+    padding-bottom: 0;
+}
+
+button.mat-mini-fab.mat-primary {
+    background-color: #0e2530;
+    height: 35px;
+}
+
+mat-icon.mat-icon.material-icons {
+    color: #0e2530;
+}
+
+mat-card-title.mat-card-title {
+    font-size: 18px;
+}
+mat-card-title.font-weight-bold.mat-card-title {
+    font-size: 16px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+
+ mat-paginator.w-100.mat-paginator {
+        margin-left: 47px;
+    }
+ .head.col-12.p-0 {
+        margin-top: -50px;
+        margin-bottom: -19px;
+}
+ mat-card-title.mat-card-title {
+        margin: 16px 0px 18px 14px;
+}
+mat-card-content.mat-card-content {
+height: 136px;}
+a.mat-raised-button {
+    text-decoration: none;
+}
+.head.col-12.p-0 {
+    margin-left: -13px;
+}
+    
+mat-card.m-2.mat-card {
+     background-color: white;
+}
+
+ div#wid {
+    margin-left: 45px;
+} 
+div#fix {
+    margin-right: -18%;
+}
+div#setrow {
+    margin-left: 14px;
+}
+div#imgtop {
+    margin-top: 48px;
+}
+
+label {
+    color: #62addc;
+}
+h5#exampleModalLabel {
+    color: #62addc;
+}
+button.org.mat-raised-button {
+    background-color: #3484C5;
+    color: white;
+    margin-left: 5px;
+}
+button#delete {
+    margin-left: 77%;
+  }
+button.btn.btn-secondary {
+    background-color: #62addc;
+    width: 20%;
+    border-color: #62addc;
+}

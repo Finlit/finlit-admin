@@ -1,0 +1,21 @@
+
+<div class="container">
+<a mat-raised-button  class="btnadd" [routerLink]="['new']">
+Add New
+</a>
+<div class="row" > 
+<div class="col-sm-6" *ngFor="let blog of blogs?.items">
+  <div class="card" fxFlex="85">
+<div class="card-body text-center">
+<p><img class=" img-fluid"  [src]="blog?.imgUrl" onerror="this.src= '/assets/images/noimg.jpg'" alt=""></p>
+<h4 class="card-title">{{ blog?.title }}</h4>
+<p class="card-description">{{ blog?.description}}</p>
+<button mat-raised-button  class="org" [routerLink]="[blog.id]">Edit</button>&nbsp;&nbsp;
+<button mat-raised-button color="warn" (click)="delete(blog.id)">Delete</button>
+
+          </div>
+              </div>
+                  </div>
+                       </div>
+                          </div>
+                     

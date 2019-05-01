@@ -1,0 +1,233 @@
+.pop_container {
+    position: fixed;
+    /* background: #e5e5e5bf; */
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: 9999999;
+    overflow: auto;
+    padding-bottom: 6%;
+}
+
+.pop_content {
+    /* animation: popup 0.1s; */
+   
+        margin: 0 auto;
+        margin-top: 6%;
+        border-radius: 4px;
+        margin-left: 24%;
+        background-color: #ffffff;
+        box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.51);
+        padding: 23px;
+        position: relative;
+        min-height: 100px;
+        max-width: 896px;
+    
+    /* transition: max-height 0.1s ease-out;
+    transition: height 0.1s ease-out;
+    -webkit-transition: height 0.1s ease-out;
+    -moz-transition: height 0.1s ease-out;
+    -ms-transition: height 0.1s ease-out;
+    -o-transition: height 0.1s ease-out; */
+    /* -webkit-animation: popup 0.1s; */
+}
+
+.pop_close_btn {
+    color: #475059;
+    cursor: pointer;
+}
+
+.right_cross_btn {
+    margin-top: -3px;
+    font-size: 18px;
+    color: #475059;
+    font-family: 'Gibson-SemiBold', arial, sans-serif;
+}
+
+.left_back_btn {
+    width: 9px;
+    height: 15px;
+}
+
+/* .pop_close_btn:hover {
+     font-weight: 600; 
+} */
+
+.margin_0 {
+    margin: 0;
+}
+
+.alert_header {
+    /* font-weight: 600; */
+    color: #2b2d3c;
+    margin: 0;
+    margin-bottom: 13px;
+}
+
+.blur_bg {
+    background-color: rgba(233, 233, 233, 0.66);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    filter: blur(64px);
+}
+
+.terms-bg {
+    right: 16px;
+}
+
+.alert_subheader {
+    color: #2b2d3c;
+    padding-bottom: 8px;
+    font-size: 13px;
+    /* font-weight: 600; */
+    font-style: normal;
+    font-stretch: normal;
+    /* line-height: 2.69; */
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin-bottom: 0;
+    /* padding-bottom: 0; */
+}
+
+.sub_head_2 {
+    font-size: 13px;
+    /* font-weight: 600; */
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.69;
+    letter-spacing: normal;
+    text-align: left;
+    margin: 0;
+    color: #616d7a;
+    text-transform: uppercase;
+}
+
+.grid_padding_left {
+    padding-left: 30px
+}
+
+.terms_container {
+    padding: 57px;
+}
+
+.btn_cancel {
+    border-radius: 8px;
+    border: solid 1px #838f9b;
+    padding: 15px 60px;
+    background: #ffffff;
+}
+
+.btn_cancel_content {
+    font-size: 18px;
+    color: #475059;
+    font-family: 'Gibson-SemiBold', arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.teamChampFaqContainer .header_content,
+.cancelFaqContainer .header_content {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .inner_content,
+    .footer_content {
+        padding: 0px 50px;
+    }
+    .header_content {
+        padding-left: 50px;
+        padding-right: 28px;
+        padding-top: 30px;
+    }
+    .teamChampFaqContainer .inner_content {
+        padding: 0;
+    }
+    .cancelFaqContainer .inner_content {
+        padding: 29px 0px 50px 34px;
+    }
+    .existing_user_container .header_content {
+        padding: 20px 19px 0px 19px;
+    }
+    .existing_user_container .inner_content {
+        padding: 0px 19px 7px 19px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .alert_subheader {
+        /* text-align: center !important; */
+        height: 35px;
+        -webkit-line-clamp: 1;
+        text-overflow: ellipsis;
+        width: 96%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .alert_header {
+        text-align: center;
+    }
+    .pop_content {
+        margin: 8px !important;
+    }
+    .terms_container {
+        padding: 25px;
+    }
+    .terms_container .alert_header {
+        text-align: left;
+    }
+    .moderation_header {
+        text-align: left;
+        margin: 0 24px;
+    }
+    .join_campaign_container .alert_header {
+        text-align: left;
+        margin-bottom: 8px;
+    }
+    .join_campaign_container .alert_subheader {
+        width: calc(100% - 24px);
+        height: auto;
+    }
+    .join_campaign_container .header_content {
+        margin-top: 7px;
+    }
+    .join_campaign_container .pop_content {
+        padding: 20px 24px 20px 24px !important;
+    }
+    .teamChampFaqContainer .pop_content {
+        margin: 24px !important;
+    }
+    .cancelFaqContainer .inner_content {
+        padding: 60px 20px 0px 10px;
+    }
+    .cancelFaqContainer .header_content {
+        display: block;
+    }
+    .cancelFaqContainer .pop_content {
+        margin: 88px 23px 0px 23px !important;
+    }
+    .existing_user_container .alert_header {
+        text-align: left;
+        font-size: 24px;
+    }
+    .existing_user_container .pop_content {
+        min-height: 263px !important;
+        margin-top: 172px !important;
+        margin-left: 24px !important;
+        margin-right: 24px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .iframe-container {
+        width: 780px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .cancelFaqContainer {
+        max-height: calc(100% - 50px) !important;
+    }
+}

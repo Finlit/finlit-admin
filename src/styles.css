@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"; 
+html {
+    width: 100%;
+    height: 100%;
+}
+
+mat-card {
+    width: 99%;
+}
+
+.offen {
+    margin: 0 0 200px 0px;
+}
+
+.card {
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 3px;
+    padding: 15px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 8px rgba(61, 67, 71, 0.596), 0 0 8px rgba(108, 115, 121, 0.671);
+    text-decoration: none;
+}
+
+
+
+
+

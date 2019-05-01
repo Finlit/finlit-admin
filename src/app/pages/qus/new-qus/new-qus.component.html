@@ -1,0 +1,46 @@
+<div class="container-fluid">
+        <!-- <app-sppinners [isLoading]="question?.isLoading"></app-sppinners>  -->
+    <div class="row">
+        <div class="offset-1 col-10">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>NEW QUESTION</mat-card-title>
+                </mat-card-header>
+
+                <form [formGroup]="userForm" novalidate (ngSubmit)="create(userForm.value)">
+                    <mat-card-content>
+                        <div class="row">
+                            
+                            <div class="form-group col-md-12">
+                                <label for="label">Label</label>
+                                <input type="text" class="form-control" formControlName="label" name="label" [(ngModel)]="question.properties.label">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                                <div class="form-group col-md-6" *ngFor="let option of question.properties.options;let i=index">
+                                <label for="text">Option {{i+1}}</label>&nbsp;&nbsp;
+                                <input type="radio" [ngModelOptions]="{standalone: true}"  name="isCorrect_{{i}}" [(ngModel)]="option.isCorrect"  (change)="onchnage(option,i)">
+                                <input type="text" class="form-control"  formControlName="optionId_{{i}}" [(ngModel)]="option.text" required>
+                               
+                            </div>
+                        </div>
+
+                  
+
+                    </mat-card-content>
+                    <mat-divider></mat-divider>
+                    <mat-card-actions>
+                        <button mat-raised-button color="primary" matTooltip="SAVE"  matTooltipPosition="above" >
+                            <mat-icon>save</mat-icon> SAVE
+                        </button>
+                        <button mat-raised-button color="primary" matTooltip="CANCEL" matTooltipPosition="above" [routerLink]="['../../']">
+                            <mat-icon>cancel</mat-icon> CANCEL
+                        </button>
+
+                    </mat-card-actions>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>

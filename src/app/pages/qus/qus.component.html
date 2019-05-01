@@ -1,0 +1,80 @@
+
+<div class="container-fluid">
+    <app-sppinners [isLoading]="questions?.isLoading"></app-sppinners> 
+  <div  class="row">
+    <div class="col-12 p-0">
+      <mat-card class="m-2 p-3">
+        <div class="row">
+          <mat-card-title class="header">Questions</mat-card-title> 
+          <!-- <a mat-raised-button  id="btnadd" [routerLink]="['new']">
+            NEW
+        </a>  -->
+        <a mat-raised-button  id="btnadd" [routerLink]="['/pages/qus/new-qus/new']">
+          NEW
+        </a>
+        </div>
+      </mat-card>
+    </div>
+
+    <div class="col col-sm col-md-6 p-2 m-0" *ngFor="let question of questions?.items">
+      <mat-card class="m-2">
+        <mat-card-content class="m-0">
+          
+          <div class="abc">
+            <div class="row">
+                <i class="material-icons" matTooltip="label">
+                  label
+                    </i>
+                <div class="col" matTooltip="label">{{ question?.label}}</div>
+            </div>
+          </div>
+        <mat-divider></mat-divider>
+       
+        <div class="row">
+          <div class="col">
+            <div class="col-12 mt-1 font-weight-bold row"> Questions Options:</div>
+            <div class="row">
+              <table class="table m-2" >
+                <tr>
+                 
+                  <th>Text</th>
+                  <th>Is Correct</th>
+                </tr>
+                <tr *ngFor="let option of question?.options">
+                  <td>{{option?.text}}</td>
+                  <td>{{option?.isCorrect}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          </div> 
+    
+
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-actions class="text-center">
+          <button mat-raised-button class="org"[routerLink]="['/pages/qus/edit-qus',question?.id]" matTooltip="EDIT">
+            EDIT
+          </button> 
+
+          <!-- <button mat-raised-button class="org" [routerLink]="[question.id]" matTooltip="EDIT">
+            EDIT
+          </button>  -->
+          <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="edit(user)" id="btn"
+          title="EDIT">
+          EDIT
+          [routerLink]="[question.id]"
+        </button> -->
+          <button mat-raised-button color="warn"  (click)="delete(question.id)" matTooltip="DELETE">DELETE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  <div class="row m-1 w-100 p-0">
+    <mat-paginator class="w-100" [length]="questions.totalRecords" [pageSize]="questions.pageSize" [pageSizeOptions]="[ 5, 10, 25, 100]" [pageIndex]="questions.pageNo - 1"
+      (page)="questions.pageSize = $event['pageSize'];questions.pageNo = $event['pageIndex']+1;fetch()">
+    </mat-paginator>
+  </div> 
+</div>
+
+

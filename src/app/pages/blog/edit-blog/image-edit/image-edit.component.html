@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-8">
+    <img id="image" src="" alt="edit-image" width="100%" style="max-height:300px">
+  </div>
+  <div class="col-4">
+    <div>
+      <div class="btn-group">
+      
+      </div>
+      <div class="btn-group">
+        <button mat-mini-fab color="primary" (click)="cropper.zoom(0.1)" title="Zoom In">
+          <mat-icon>zoom_in</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary" (click)="cropper.zoom(-0.1)" title="Zoom Out">
+          <mat-icon>zoom_out</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary" (click)="cropper.reset()" title="Reset">
+          <span class="fa fa-refresh">Reset</span>
+        </button>
+      </div>
+      <div class="btn-group">
+        <button mat-mini-fab color="primary" (click)="cropper.move(-10,0)" title="Move Left">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary" (click)="cropper.move(10,0)" title="Move Right">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary" (click)="cropper.move(0,-10)" title="Move Up">
+          <mat-icon>arrow_upward</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary" (click)="cropper.move(0,10)" title="Move Down">
+          <mat-icon>arrow_downward</mat-icon>
+        </button>
+      </div>
+      
+      <div class="btn-group">
+
+      </div>
+      <div class="btn-group">
+        <button mat-raised-button color="primary" (click)="saveImg()" title="Reset">
+          SAVE
+        </button>
+        <button mat-raised-button color="primary" mat-dialog-close title="Destroy">
+          CANCEL
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

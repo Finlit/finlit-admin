@@ -1,0 +1,29 @@
+.card{
+    margin-top: 12px;
+    /* margin-left: 20px; */
+}
+.card-header{
+    background-color: #62addc;
+    color: #fff;
+}
+p.card-description {
+    text-align: justify;
+}
+a.btnadd.mat-raised-button {
+    background-color: #3484C5;
+    color: white;
+    margin-left: 5px;
+     }
+     button.org.mat-raised-button {
+        background-color: #3484C5;
+        color: white;
+        margin-left: 5px;
+    }
+/* button.btndlt.mat-raised-button {
+        color: white;
+        border-radius: 28px;      
+        font-size: 15px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: #5db6e3;
+     float: center;
+            } */

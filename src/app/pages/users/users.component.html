@@ -1,0 +1,133 @@
+
+<div class="container-fluid">
+  <div class="row" >
+    <div class=" col col-sm col-md-6  p-2" *ngFor="let user of users?.items">
+      <div class="card" id="wid">
+
+        <div id="imgtop">
+          <img class="example-header-image" [src]="user?.imgUrl ||  '/assets/images/noimg.jpg'" alt="" onerror="this.src =  '/assets/images/noimg.jpg'"
+            title="User Image">
+        </div>
+
+        <div class="row">
+        
+          <div class="col" id="setrow">
+            <div class="row  my-2">
+              <i class="material-icons" title="Name">perm_identity </i>
+              <div class="col" title="Name">{{user?.name|| 'N/A' }} </div>
+            </div>
+            <div class="row  my-2">
+              <i class="material-icons" title="aboutUs">person_pin </i>
+              <div class="col" title="aboutUs">{{user?.aboutUs|| 'N/A' }} </div>
+            </div>
+
+            <div class="row my-2">
+              <i class="material-icons" title="Role"> person </i>
+              <div class="col" title="Role"> {{user?.role || 'N/A' }}</div>
+            </div>
+
+            <div class="row my-2">
+              <i class="material-icons" title="Email"> local_post_office</i>
+              <div class="col" title="Email"> {{user?.email || 'N/A' }}</div>
+            </div>
+
+          </div>
+          <div class="col" id="fix">
+            <div class="row my-2">
+              <i class="material-icons" title="ageGroup">perm_identity</i>
+              <div class="col" title="ageGroup">{{user.ageGroup || 'N/A'}} </div>
+            </div>
+            <div class="row my-2 mt-2">
+              <i class="material-icons" title="Status">group</i>
+              <div class="col" title="Status">{{user.status || 'N/A' }} </div>
+            </div>
+            <div class="row my-2">
+              <i class="material-icons" title="Gender">wc</i>
+              <div class="col" title="Gender">{{user.gender || 'N/A' }} </div>
+            </div>
+
+            <div class="row my-2">
+              <i class="material-icons" title="question">contact_support</i>
+              <div class="col" title="question">{{user.question || 'N/A' }} </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <button mat-raised-button class="org" [routerLink]="[user.id]" matTooltip="VIEW">
+            View
+          </button>&nbsp;
+          <button mat-raised-button color="warn"  (click)="delete(user.id)" matTooltip="DELETE">Delete</button>
+      </div>
+      </div>
+
+    </div>
+  
+    <div class="row m-1 w-100 p-0">
+      <mat-paginator class="w-100" [length]="users.totalRecords" [pageSize]="users.pageSize" [pageSizeOptions]="[ 5, 10, 25, 100]" [pageIndex]="users.pageNo - 1"
+        (page)="users.pageSize = $event['pageSize'];users.pageNo = $event['pageIndex']+1;fetch()">
+      </mat-paginator>
+    </div>
+
+  </div>
+  
+  <ng-template class="modal-content"  #userEditFprm>
+    <!-- <app-sppinners [isLoading]="users?.isLoading"></app-sppinners>  -->
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">{{user?.properties?.id ? 'Edit':'New'}}</h5>
+      <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+    </div>
+    <form id="form">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Name</label>
+          <input type="text" class="form-control" id="inputEmail4" placeholder="User Name" name="name" [(ngModel)]="user.properties.name"
+            required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Role</label>
+          <input type="text" class="form-control" id="inputPassword4" placeholder="Role" name="role" [(ngModel)]="user.properties.role"
+            required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="gender">Gender</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Gender" name="gender" [(ngModel)]="user.properties.gender"
+            required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="aboutUs">About Us</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="About Us" name="aboutUs" [(ngModel)]="user.properties.aboutUs"
+            required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="ageGroup">Age Group</label>
+          <input type="number" class="form-control" id="inputAddress" placeholder="ageGroup" name="ageGroup" [(ngModel)]="user.properties.ageGroup"
+            required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Email" name="email" [(ngModel)]="user.properties.email"
+            required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="question">question</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="question" name="question" [(ngModel)]="user.properties.question"
+            required>
+        </div>
+      </div>
+
+    </form>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">Close</button>
+      <button type="button" class="btn btn-primary" (click)="save()">Save</button>
+    </div>
+  
+  </ng-template>

@@ -1,0 +1,42 @@
+
+.img_bg{
+    background:white;
+}
+.mat-card {
+    transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    display: block;
+    position: relative;
+    padding: 24px;
+    background: url(/assets/images/1.jpg);
+}
+.mat-raised-button:first-child {
+    margin-left: 0;
+    margin-right: 0;
+    background-color: white;
+    color: black;
+    height: 200px;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+}
+
+button {
+    background-color: #1e88e5;
+    border-color: #1e88e5;
+    color: white;
+    width: 44%;
+    height: 45px;
+   
+}
+
+form.ng-untouched.ng-pristine.ng-valid {
+    box-shadow: 0 1px 1px 0 #007bff30;
+}
+
+

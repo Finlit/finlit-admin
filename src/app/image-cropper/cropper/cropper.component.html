@@ -1,0 +1,17 @@
+<div class="main-container">
+  <div class="inner-content">
+      <i class="material-icons close-pop" (click)="close()">close</i>
+      <h4 class="text-center w-100" *ngIf="isError">Please Select Image</h4>
+      <div class="row m-0">
+          <div class="col-12 p-2 text-right">
+              <button class="save-btn mr-2" (click)="save()" title="Save">SAVE</button>
+              <button class="cancel-btn" (click)="close()" title="CANCEL">CANCEL</button>
+          </div>
+          <div class="col-12 p-0">
+              <div class="image-container-box">
+                  <img id="image" src="https://wallpaperbrowse.com/media/images/3848765-wallpaper-images-download.jpg" alt="Picture">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
